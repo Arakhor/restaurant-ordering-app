@@ -24,13 +24,30 @@
 			<section id="order"></section>
 		</main>
 		<div id="overlay" class="hidden"></div>
-		<section id="modal" class="hidden">
+		<form id="modal" class="modal hidden">
 			<h2>Enter card details</h2>
-			<input id="name-input" type="text" placeholder="Enter your name" />
-			<input id="card-input" type="text" placeholder="Enter card number" />
-			<input id="ccv-input" type="number" placeholder="Enter CCV" />
-			<button id="pay-btn">Pay</button>
-		</section>
+			<input
+				id="name-input"
+				type="text"
+				placeholder="Enter your name"
+				required
+			/>
+			<input
+				id="card-input"
+				type="text"
+				placeholder="Enter card number"
+				required
+			/>
+			<input
+				id="ccv-input"
+				type="text"
+				placeholder="Enter CCV"
+				minlength="3"
+				maxlength="3"
+				required
+			/>
+			<input type="submit" id="pay-btn" value="Pay" />
+		</form>
 		<script src="index.js" type="module"></script>
 	</body>
 </html>

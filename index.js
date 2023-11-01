@@ -1,14 +1,15 @@
 import { menuArray } from '/data.js'
 
+const form = document.getElementById('modal')
+
 let order = {}
 let orderComplete = false
-let orderName = ''
 
 menuArray.forEach((element) => {
 	order[element.id] = 0
 })
 
-document.addEventListener('click', function (e) {
+document.addEventListener('click', (e) => {
 	if (e.target.dataset.item) {
 		handleAddBtnClick(e.target.dataset.item)
 	} else if (e.target.dataset.remove) {
@@ -17,9 +18,14 @@ document.addEventListener('click', function (e) {
 		handleCompleteOrderClick()
 	} else if (e.target.id === 'overlay') {
 		toggleModal()
-	} else if (e.target.id === 'pay-btn') {
-		handlePayBtnClick()
 	}
+})
+
+form.addEventListener('submit', (e) => {
+	e.preventDefault()
+	orderComplete = true
+	toggleModal()
+	renderOrder()
 })
 
 renderMenuList()
@@ -49,8 +55,8 @@ function handleCompleteOrderClick() {
 
 function handlePayBtnClick() {
 	orderName = document.getElementById('name-input').value
-	renderOrder()
-	toggleModal()
+	// renderOrder()
+	// toggleModal()
 }
 
 function toggleModal() {
@@ -114,7 +120,9 @@ function renderOrder() {
 		orderEl.innerHTML = getOrderHtml()
 	} else {
 		orderEl.innerHTML = /*html*/ `
-			<h3 id="order-complete">Thanks, ${orderName}! Your order is on its way!</h3>
+			<h3 id="order-complete">Thanks, ${
+				document.getElementById('name-input').value
+			}! Your order is on its way!</h3>
 		`
 	}
 }
