@@ -53,12 +53,6 @@ function handleCompleteOrderClick() {
 	orderComplete = true
 }
 
-function handlePayBtnClick() {
-	orderName = document.getElementById('name-input').value
-	// renderOrder()
-	// toggleModal()
-}
-
 function toggleModal() {
 	document.getElementById('modal').classList.toggle('hidden')
 	document.getElementById('overlay').classList.toggle('hidden')

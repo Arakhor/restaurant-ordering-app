@@ -16,23 +16,23 @@ h6 {
 }
 
 h1 {
-	font-size: 36px;
+	font-size: 2.4rem;
 }
 
 h2 {
-	font-size: 22px;
+	font-size: 1.4rem;
 }
 
 h3 {
-	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 h4 {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 h5 {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 header {
@@ -40,7 +40,8 @@ header {
 	background-position: center 65%;
 	background-size: cover;
 	height: 160px;
-	width: 600px;
+	/* width: 600px; */
+	width: 100%;
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 35px 0 0 45px;
@@ -55,18 +56,22 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-height: 100vh;
+	height: 100vh;
 	background-color: #1e1e2e;
 }
 
 main {
+	display: flex;
+	flex-direction: column;
 	padding: 20px 0;
-	width: 600px;
+	/* width: 600px; */
+	width: 100%;
+	height: 100%;
 	background-color: #fff;
 }
 
 main section {
-	width: 500px;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -79,7 +84,7 @@ main section {
 }
 
 .menu-list-item p {
-	font-size: 70px;
+	font-size: 5rem;
 	margin: 0;
 	padding: 0;
 	line-height: 1;
@@ -138,7 +143,7 @@ main section {
 #order-btn {
 	color: white;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	font-style: normal;
 	font-weight: 700;
 	width: 100%;
@@ -156,6 +161,7 @@ main section {
 	top: 20%;
 	background-color: #fff;
 	padding: 25px;
+	width: 80%;
 }
 
 #modal h2 {
@@ -168,9 +174,9 @@ main section {
 #modal input {
 	border: 1px solid #757575;
 	border-radius: 4px;
-	width: 400px;
+	width: 100%;
 	height: 65px;
-	font-size: 20px;
+	font-size: 1.25rem;
 	padding-left: 25px;
 	margin: 0 0 25px;
 }
@@ -183,7 +189,7 @@ main section {
 	width: 400px;
 	height: 65px;
 	color: white;
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 700;
 	margin: 20px 0 0;
 }
@@ -204,7 +210,7 @@ main section {
 	background: #ecfdf5;
 	border-radius: 4px;
 	color: #065f46;
-	font-size: 32px;
+	font-size: 2rem;
 	height: 120px;
 	line-height: 120px;
 }
